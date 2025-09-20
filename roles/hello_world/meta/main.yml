@@ -1,0 +1,16 @@
+---
+galaxy_info:
+  author: Vlad Ghinea
+  description: A simple Hello World role
+  license: MIT
+  min_ansible_version: 2.9
+  platforms:
+    - name: any
+      versions:
+        - all
+  galaxy_tags:
+    - hello_world
+    - demo
+    - test
+
+dependencies: []

@@ -1,0 +1,38 @@
+---
+- name: Test hello_world module
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Test default parameters
+      vladgh.test.hello_world:
+      register: result1
+
+    - name: Verify default result
+      assert:
+        that:
+          - result1.greeting == "Hello, World!"
+          - result1.changed == true
+
+    - name: Test custom parameters
+      vladgh.test.hello_world:
+        name: "Test"
+        message: "Hi"
+      register: result2
+
+    - name: Verify custom result
+      assert:
+        that:
+          - result2.greeting == "Hi, Test!"
+          - result2.changed == true
+
+    - name: Test check mode
+      vladgh.test.hello_world:
+        name: "CheckMode"
+      check_mode: true
+      register: result3
+
+    - name: Verify check mode result
+      assert:
+        that:
+          - result3.greeting == ""
+          - result3.changed == false

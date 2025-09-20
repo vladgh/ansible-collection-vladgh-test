@@ -1,0 +1,31 @@
+---
+- name: Hello World Playbook
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Say hello to the world
+      vladgh.test.hello_world:
+      register: hello_result
+
+    - name: Display the greeting
+      debug:
+        msg: "{{ hello_result.greeting }}"
+
+    - name: Say hello to Alice
+      vladgh.test.hello_world:
+        name: Alice
+      register: alice_result
+
+    - name: Display Alice's greeting
+      debug:
+        msg: "{{ alice_result.greeting }}"
+
+    - name: Say good morning to Bob
+      vladgh.test.hello_world:
+        name: Bob
+        message: Good morning
+      register: bob_result
+
+    - name: Display Bob's greeting
+      debug:
+        msg: "{{ bob_result.greeting }}"
