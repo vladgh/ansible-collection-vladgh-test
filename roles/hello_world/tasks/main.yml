@@ -8,4 +8,4 @@
 
 - name: Display the generated greeting
   debug:
-    msg: "Role says: {{ greeting_result.greeting }}"
+    msg: "Role says: {{ greeting_result.greeting }}. How are you?"
