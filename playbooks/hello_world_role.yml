@@ -1,0 +1,15 @@
+---
+- name: Hello World Role Demo
+  hosts: localhost
+  gather_facts: false
+  roles:
+    - vladgh.test.hello_world
+
+- name: Hello World Role Demo with Custom Variables
+  hosts: localhost
+  gather_facts: false
+  vars:
+    hello_world_name: "Ansible Users"
+    hello_world_message: "Greetings"
+  roles:
+    - vladgh.test.hello_world

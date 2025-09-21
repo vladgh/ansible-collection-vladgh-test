@@ -1,0 +1,20 @@
+namespace: vladgh
+name: test
+version: 1.0.0
+readme: README.md
+authors:
+  - Vlad Ghinea
+description: A simple Hello World Ansible collection for testing and demonstration purposes
+license:
+  - MIT
+license_file: ''
+tags:
+  - hello_world
+  - demo
+  - test
+dependencies: {}
+repository: https://github.com/vladgh/ansible-collection-vladgh-test
+documentation: https://github.com/vladgh/ansible-collection-vladgh-test
+homepage: https://github.com/vladgh/ansible-collection-vladgh-test
+issues: https://github.com/vladgh/ansible-collection-vladgh-test/issues
+build_ignore: []

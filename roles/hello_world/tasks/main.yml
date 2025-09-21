@@ -1,0 +1,11 @@
+---
+# tasks file for hello_world role
+- name: Generate greeting using hello_world module
+  vladgh.test.hello_world:
+    name: "{{ hello_world_name }}"
+    message: "{{ hello_world_message }}"
+  register: greeting_result
+
+- name: Display the generated greeting
+  debug:
+    msg: "Role says: {{ greeting_result.greeting }}"
