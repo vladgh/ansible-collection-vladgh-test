@@ -1,4 +1,4 @@
 ---
 # defaults file for hello_world role
-hello_world_name: "World"
+hello_world_name: "Vlad"
 hello_world_message: "Hello"
